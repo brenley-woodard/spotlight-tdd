@@ -97,8 +97,16 @@ test('should take in three numbers and return those numbers in an array', (expec
     expect.deepEqual(actual3, expected3);
 });
 
-// test('should take in three numbers and return those numbers mushed together as a string', (expect) => {
-//     const expected = '845';
-//     const actual = returnAsAString(8, 4, 5);
-//     expect.equal(actual, expected);
-// });
+test('should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected = '845';
+    const actual = returnAsAString(8, 4, 5);
+    expect.deepEqual(actual, expected);
+
+    const expected2 = '123';
+    const actual2 = returnAsAString(1, 2, 3);
+    expect.deepEqual(actual2, expected2);
+
+    const expected3 = '234';
+    const actual3 = returnAsAString(2, 3, 4);
+    expect.deepEqual(actual3, expected3);
+});
