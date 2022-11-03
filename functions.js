@@ -14,10 +14,9 @@ Output:
 
 */
 
-export function addExclamationPoints() {
-    return true;
+export function addExclamationPoints(str) {
+    return `${str}!!!`;
 }
-
 // This function should take in a number and multiply it by seven
 
 /* 
