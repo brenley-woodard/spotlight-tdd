@@ -3,6 +3,7 @@ import {
     addExclamationPoints,
     divideThenMultiply,
     getSecondItem,
+    getLastItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
@@ -138,5 +139,19 @@ test('should take an array and return the second item in the array', (expect) =>
 
     const expected3 = 'orange';
     const actual3 = getSecondItem(['kiwi', 'orange', 'apple', 'plum']);
+    expect.equal(actual3, expected3);
+});
+
+test("should take an array and return the LAST item in the array, no matter the array's length", (expect) => {
+    const expected = 'plum';
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+    expect.equal(actual, expected);
+
+    const expected2 = 'orange';
+    const actual2 = getLastItem(['apple', 'kiwi', 'plum', 'orange']);
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'apple';
+    const actual3 = getLastItem(['kiwi', 'orange', 'plum', 'apple']);
     expect.equal(actual3, expected3);
 });
