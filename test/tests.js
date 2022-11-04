@@ -10,6 +10,7 @@ import {
     myFunction,
     returnAsAnArray,
     returnAsAString,
+    renderDogLI,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -155,3 +156,31 @@ test("should take an array and return the LAST item in the array, no matter the 
     const actual3 = getLastItem(['kiwi', 'orange', 'plum', 'apple']);
     expect.equal(actual3, expected3);
 });
+
+test('should take a dog object and return an <li> with the name of the dog', (expect) => {
+    const expected = '<li>Benny</li>';
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+    expect.equal(actual, expected);
+
+    const expected2 = '<li>Sully</li>';
+    const actual2 = renderDogLI({ name: 'Sully', age: 16 });
+    expect.equal(actual2, expected2);
+
+    const expected3 = '<li>Cricket</li>';
+    const actual3 = renderDogLI({ name: 'Cricket', age: 7 });
+    expect.equal(actual3, expected3);
+});
+
+// test("", (expect) => {
+//     const expected = ;
+//     const actual = ;
+//     expect.equal(actual, expected);
+
+//     const expected2 = ;
+//     const actual2 = ;
+//     expect.equal(actual2, expected2);
+
+//     const expected3 = ;
+//     const actual3 = ;
+//     expect.equal(actual3, expected3);
+// });
